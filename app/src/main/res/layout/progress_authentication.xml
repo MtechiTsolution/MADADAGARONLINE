@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_main_bg">
+
+    <LinearLayout
+        android:id="@+id/main_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="7dp"
+                        android:gravity="center"
+                        android:layout_marginTop="-3dp"
+                        android:layout_marginBottom="-4dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_margin="30dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/text_back"
+                        android:textSize="16dp"
+                        android:textColor="#fff"
+                        android:id="@+id/activity_main_link"
+                        android:text="we sent you verification code.\nHopefully it will get there soon! "
+                        android:layout_gravity="center"
+
+                        />
+<!--                    <com.airbnb.lottie.LottieAnimationView-->
+<!--                        android:id="@+id/animation_view"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="120dp"-->
+<!--                        android:layout_centerInParent="true"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        app:lottie_autoPlay="true"-->
+<!--                        app:lottie_loop="true"-->
+<!--                        app:lottie_rawRes="@raw/auth" />-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="we've sent you verification code to (+92)347 9725866.change"
+                        android:padding="7dp"
+                        android:id="@+id/phnauthdig"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:textSize="16dp"
+                        android:layout_gravity="center"
+
+                        />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="#000"
+                        app:cardElevation="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!-- Media -->
+
+
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

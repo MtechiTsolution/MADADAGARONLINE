@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "781885090218",
+    "project_id": "madadgaronline-5011e",
+    "storage_bucket": "madadgaronline-5011e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781885090218:android:400a91065470f28b7423d3",
+        "android_client_info": {
+          "package_name": "com.example.madadagaronline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781885090218-fc69508411d3emarolhc5c3p318117cg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.madadagaronline",
+            "certificate_hash": "a1ca0c40ffe7cd39e01b33fdb95bc7825ce31a3b"
+          }
+        },
+        {
+          "client_id": "781885090218-8ru367o1scnoer32qlo4e30f25q1r882.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwq4o2hqvozSOJAQPQvyatG3CR1wBOkZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781885090218-8ru367o1scnoer32qlo4e30f25q1r882.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

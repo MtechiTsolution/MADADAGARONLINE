@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MADADAGARONLINE">
         <activity
+            android:name=".CurrentJobs"
+            android:exported="false" />
+        <activity
+            android:name=".PendingJobs"
+            android:exported="false" />
+        <activity
             android:name=".Success"
             android:exported="false" />
         <activity

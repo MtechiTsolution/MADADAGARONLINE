@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="bg">#282828</color>
-
+    <color name="whiteBodyColor">#FCFCFC</color>
     <color name="gradient_start_color">#4c84ff</color>
     <color name="gradient_end_color">#18a3fe</color>
     <color name="green_light">#65c81b</color>

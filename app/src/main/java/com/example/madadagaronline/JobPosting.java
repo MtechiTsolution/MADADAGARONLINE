@@ -54,11 +54,10 @@ public class JobPosting extends AppCompatActivity {
 //        }
 
         progressDialog = new ProgressDialog(this);
-<<<<<<< HEAD
+
     //    progressDialog = new ProgressDialog(this, R.style.AppCompatAlertDialogStyle);
-=======
-        //progressDialog = new ProgressDialog(this, R.style.AppCompatAlertDialogStyle);
->>>>>>> d0406738e428338d4d86f7b99f9d076683a8773e
+//progressDialog = new ProgressDialog(this, R.style.AppCompatAlertDialogStyle);
+
 
 
         Title = (EditText) findViewById(R.id.title);
@@ -104,11 +103,7 @@ public class JobPosting extends AppCompatActivity {
         progressDialog.show();
 
         try{
-<<<<<<< HEAD
 
-=======
-//
->>>>>>> d0406738e428338d4d86f7b99f9d076683a8773e
 //            Job_Model job_class  = new Job_Model(title , rate , location , detail, UID);
 //            String jobid=mDatabase.push().getKey();
 //            mDatabase.child(jobid).setValue(job_class, new DatabaseReference.CompletionListener() {

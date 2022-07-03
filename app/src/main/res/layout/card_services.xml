@@ -24,16 +24,18 @@
             android:layout_marginLeft="50dp">
 
             <TextView
-                android:text="Plumping"
+                android:id="@+id/servititle"
                 android:layout_width="wrap_content"
-                android:textColor="#000"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="Plumping"
+                android:textColor="#000" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="200+ Skilled plumbers ready to work"
                 android:textStyle="bold"
+                android:id="@+id/servcedesc"
                 android:textSize="14sp"/>
 
         </LinearLayout>
@@ -42,6 +44,7 @@
 
     <ImageView
         android:layout_width="60dp"
+        android:id="@+id/img_plumpingk"
         android:layout_height="60dp"
         android:layout_centerVertical="true"
         android:elevation="13dp"

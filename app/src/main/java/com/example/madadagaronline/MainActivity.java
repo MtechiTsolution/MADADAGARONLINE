@@ -35,10 +35,11 @@ public class MainActivity extends AppCompatActivity {
 
         super.onStart();
         if(user==null){
-            Intent intent = new Intent(MainActivity.this, com.example.madadagaronline.Authintication_PhoneNumber.class);
+            Intent intent = new Intent(MainActivity.this, Select_your_Option.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         }else {
-            dr.child("Users").orderByChild("phonenumber").equalTo(user.getPhoneNumber()).addValueEventListener(new ValueEventListener() {
+            dr.child("Users").child(user.getUid()).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
 

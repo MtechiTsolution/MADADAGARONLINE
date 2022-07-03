@@ -12,8 +12,12 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,7 +48,7 @@ import java.io.InputStream;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class Registration extends AppCompatActivity {
+public class Registration extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     FloatingActionButton editpic;
     CircleImageView circleImageView;
     EditText firstname;
@@ -63,6 +67,8 @@ public class Registration extends AppCompatActivity {
     String downloodurl,number;
     ProgressDialog progressDialog ;
     String rating="",rater="",usernumber="0";
+
+    String[] bankNames={"BOI","SBI","HDFC","PNB","OBC"};
 
 
     @Override
@@ -123,10 +129,25 @@ public class Registration extends AppCompatActivity {
             }
         });
 
+        Spinner spin = (Spinner) findViewById(R.id.spinerm);
+        LinearLayout catogrylayout=findViewById(R.id.ctgr);
+        if(Select_your_Option.ckey==1){
+            catogrylayout.setVisibility(View.VISIBLE);
+            spin.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) Registration.this);
+
+//Creating the ArrayAdapter instance having the bank name list
+            ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,bankNames);
+            aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//Setting the ArrayAdapter data on the Spinner
+            spin.setAdapter(aa);
+        }
 
 
 
     }
+
+
+
 
     public void Goto_Home(View view) {
 
@@ -256,8 +277,12 @@ public class Registration extends AppCompatActivity {
 
 
         if(user!=null){
+            String ismador="client";
+            if(Select_your_Option.ckey==1){
+                ismador="mazdor";
+            }
             MyUser myUser=new MyUser(firstname.getText().toString(),lastname.getText().toString(),
-                    phonenumber.getText().toString(),user.getUid().toString(),"",downloodurl,"status","",location.getText().toString(),cnicno.getText().toString());
+                    phonenumber.getText().toString(),user.getUid().toString(),"",downloodurl,ismador,"1",cnicno.getText().toString(),location.getText().toString());
                     dr.child("Users").child(user.getUid()).setValue(myUser).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
@@ -330,4 +355,13 @@ public class Registration extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }

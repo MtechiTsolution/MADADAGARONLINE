@@ -2,21 +2,21 @@ package com.example.madadagaronline.Models;
 
 public class MyUser {
 
-    String first_name, last_name, phonenumber, userid, device_token, image, status, usernum, location;
-    String cnic;
+    String first_name, last_name, phonenumber, userid, catogory, image, status, usernum,cnic, location;
+
     public MyUser() {
     }
 
-    public MyUser(String first_name, String last_name, String phonenumber, String userid, String device_token, String image, String status, String usernum, String cnic, String location) {
+    public MyUser(String first_name, String last_name, String phonenumber, String userid, String catogory, String image, String status, String usernum, String cnic, String location) {
         this.first_name = first_name;
         this.last_name = last_name;
         this.phonenumber = phonenumber;
         this.userid = userid;
-        this.device_token = device_token;
+        this.catogory = catogory;
         this.image = image;
         this.status = status;
         this.usernum = usernum;
-        this.cnic =cnic;
+        this.cnic = cnic;
         this.location = location;
     }
 
@@ -52,12 +52,12 @@ public class MyUser {
         this.userid = userid;
     }
 
-    public String getDevice_token() {
-        return device_token;
+    public String getCatogory() {
+        return catogory;
     }
 
-    public void setDevice_token(String device_token) {
-        this.device_token = device_token;
+    public void setCatogory(String catogory) {
+        this.catogory = catogory;
     }
 
     public String getImage() {

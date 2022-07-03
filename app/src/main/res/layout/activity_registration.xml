@@ -196,6 +196,39 @@
                             android:hint="Enter your phone number"
                             android:backgroundTintMode="src_in"
                             />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ctgr"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Catogory"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:textColor="#000"
+        />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/next_button"
+        android:padding="10dp"
+        android:layout_weight="1"
+        android:id="@+id/spinerm"
+        android:gravity="center|left"
+        android:backgroundTintMode="src_in"
+        />
+
+
+</LinearLayout>
 
                         <TextView
                             android:layout_width="wrap_content"

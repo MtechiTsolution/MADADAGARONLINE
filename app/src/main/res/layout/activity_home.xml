@@ -225,7 +225,12 @@
 
 
     </LinearLayout>
-    <include layout="@layout/card_services">
-    </include>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:id="@+id/servirelr"></androidx.recyclerview.widget.RecyclerView>
+<!--    <include layout="@layout/card_services">-->
+<!--    </include>-->
 
 </LinearLayout>

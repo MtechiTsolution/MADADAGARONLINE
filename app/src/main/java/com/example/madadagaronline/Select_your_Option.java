@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Select_your_Option extends AppCompatActivity {
 LinearLayout l1,l2;
+public static int ckey=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +19,7 @@ LinearLayout l1,l2;
         l1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ckey=1;
                 Intent intent = new Intent(Select_your_Option.this, com.example.madadagaronline.Authintication_PhoneNumber.class);
                 startActivity(intent);
             }

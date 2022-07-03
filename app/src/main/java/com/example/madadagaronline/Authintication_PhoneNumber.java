@@ -286,7 +286,7 @@ public class Authintication_PhoneNumber extends AppCompatActivity {
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                                     if (snapshot.exists()) {
-                                        Intent intent = new Intent(Authintication_PhoneNumber.this, MainActivity.class);
+                                        Intent intent = new Intent(Authintication_PhoneNumber.this, Home.class);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                         startActivity(intent);
                                     } else {

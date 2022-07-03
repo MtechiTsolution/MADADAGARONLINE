@@ -165,7 +165,7 @@ public class Registration extends AppCompatActivity {
                 final Uri imageUri = data.getData();
                 final InputStream imageStream = getContentResolver().openInputStream(imageUri);
                 final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
-//                circleImageView.setImageBitmap(selectedImage);
+                circleImageView.setImageBitmap(selectedImage);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
                 Toast.makeText(Registration.this, "Something went wrong\n"+e.getMessage(), Toast.LENGTH_LONG).show();
@@ -257,7 +257,7 @@ public class Registration extends AppCompatActivity {
 
         if(user!=null){
             MyUser myUser=new MyUser(firstname.getText().toString(),lastname.getText().toString(),
-                    phonenumber.getText().toString(),cnicno.getText().toString(),location.getText().toString(),user.getUid(),"",downloodurl,"Active",usernumber);
+                    phonenumber.getText().toString(),user.getUid().toString(),"",downloodurl,"status","",location.getText().toString(),cnicno.getText().toString());
                     dr.child("Users").child(user.getUid()).setValue(myUser).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {

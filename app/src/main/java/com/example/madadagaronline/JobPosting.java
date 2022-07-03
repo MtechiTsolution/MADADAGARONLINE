@@ -53,8 +53,8 @@ public class JobPosting extends AppCompatActivity {
 //            startActivity(new Intent(getApplicationContext(), Home2.class));
 //        }
 
-        //progressDialog = new ProgressDialog(this);
-        progressDialog = new ProgressDialog(this, R.style.AppCompatAlertDialogStyle);
+        progressDialog = new ProgressDialog(this);
+        //progressDialog = new ProgressDialog(this, R.style.AppCompatAlertDialogStyle);
 
 
         Title = (EditText) findViewById(R.id.title);
@@ -100,28 +100,28 @@ public class JobPosting extends AppCompatActivity {
         progressDialog.show();
 
         try{
-
-            Job_Model job_class  = new Job_Model(title , rate , location , detail, UID);
-            String jobid=mDatabase.push().getKey();
-            mDatabase.child(jobid).setValue(job_class, new DatabaseReference.CompletionListener() {
-                @Override
-                public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
-
-                    Intent i;
-                    if (databaseReference.equals(databaseError)) {
-                        progressDialog.dismiss();
-                        Toast.makeText(JobPosting.this, "Error in Posting", Toast.LENGTH_SHORT).show();
-                        i = new Intent(JobPosting.this, Home.class);
-                        startActivity(i);
-                    } else {
-                        progressDialog.dismiss();
-                        Toast.makeText(JobPosting.this, "Post Upload", Toast.LENGTH_SHORT).show();
-                        i = new Intent(JobPosting.this, Success.class);
-                        startActivity(i);
-                    }
-
-                }
-            });
+//
+//            Job_Model job_class  = new Job_Model(title , rate , location , detail, UID);
+//            String jobid=mDatabase.push().getKey();
+//            mDatabase.child(jobid).setValue(job_class, new DatabaseReference.CompletionListener() {
+//                @Override
+//                public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+//
+//                    Intent i;
+//                    if (databaseReference.equals(databaseError)) {
+//                        progressDialog.dismiss();
+//                        Toast.makeText(JobPosting.this, "Error in Posting", Toast.LENGTH_SHORT).show();
+//                        i = new Intent(JobPosting.this, Home.class);
+//                        startActivity(i);
+//                    } else {
+//                        progressDialog.dismiss();
+//                        Toast.makeText(JobPosting.this, "Post Upload", Toast.LENGTH_SHORT).show();
+//                        i = new Intent(JobPosting.this, Success.class);
+//                        startActivity(i);
+//                    }
+//
+//                }
+//            });
         }
 
         catch (Exception e) {

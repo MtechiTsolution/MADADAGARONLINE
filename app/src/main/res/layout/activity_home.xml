@@ -216,7 +216,9 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/todaywdhr"
                     android:gravity="center"
-                    android:text=""></TextView>
+                    android:text="">
+
+                </TextView>
 
 
             </LinearLayout>
